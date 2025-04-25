@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilmStream</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #141414;
+      color: white;
+    }
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('netflix-bg.jpg') center/cover no-repeat;
+    }
+    .login-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    #loginForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 300px;
+    }
+    #loginForm input, #loginForm button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    #loginForm input {
+      background: #333;
+      color: white;
+    }
+    #loginForm button {
+      background-color: #e50914;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    #loginForm button:hover {
+      background-color: #f6121d;
+    }
+    .main-container {
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    header h2 {
+      font-size: 2rem;
+    }
+    #searchInput {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+    }
+    .movie-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .movie-card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+    .movie-card img {
+      width: 100%;
+      height: auto;
+    }
+    .movie-card h3 {
+      padding: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Willkommen bei ALLKINO.DE</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Benutzername" required>
+      <input type="password" id="password" placeholder="Passwort" required>
+      <button id="loginBtn" type="submit">Anmelden</button>
+    </form>
+  </div>
+
+  <div class="main-container hidden">
+    <header>
+      <h2>FilmStream</h2>
+      <input type="text" id="searchInput" placeholder="Film suchen...">
+    </header>
+    <section class="movie-gallery" id="movieGallery">
+      <div class="movie-card"><img src="https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg" alt="Avengers: Endgame"><h3>Interstellar</h3></div>
+      <div class="movie-card"><img src="https://m.media-amazon.com/images/I/81t2CVWEsUL._AC_SL1500_.jpg" alt="Batman Begins"><h3>Hary Potter</h3></div>
+      <div class="movie-card"><img src="img/Hulk_movie.jpg" alt="Hulk 1"><h3>Hulk</h3></div>
+      <div class="movie-card"><img src="img/spider-home.jpg" alt="Joker"><h3>Spiderman Home coming</h3></div>
+      <div class="movie-card"><img src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SL1500_.jpg" alt="Interstellar"><h3>Avangers: Endgame</h3></div>
+      <div class="movie-card"><img src="img/avatar2.jpg" alt="Avatar"><h3>Avatar the way of water</h3></div>
+      <div class="movie-card"><img src="img/Optimus2.jpg" alt="Optimus Prime"><h3>Optimus Prime revenge of the Fallen</h3></div>
+      <div class="movie-card"><img src="img/guardens.jpg" alt="Guardians of the Galaxy"><h3>Guardians of the Galaxy</h3></div>
+      <div class="movie-card"><img src="img/Doctor.jpg" alt="Doctor Strange"><h3>Doctor Strange</h3></div>
+      <div class="movie-card"><img src="img/365.jpg" alt="365"><h3>365 days</h3></div>
+      <div class="movie-card"><img src="img/Shrek.jpg" alt="Shrek"><h3>Shrek</h3></div>
+      <div class="movie-card"><img src="img/Mufasa.jpg" alt="Mufasa"><h3>Mufasa Der King</h3></div>
+      <div class="movie-card"><img src="img/Minecraft.jpg" alt="Minecraft"><h3>Minecraft Movie</h3></div>
+      <div class="movie-card"><img src="img/iron.jpg" alt="Iron Man"><h3>Iron Man 3</h3></div>
+      <div class="movie-card"><img src="img/Thor1.jpg" alt="Thor: Ragnarok"><h3>Thor: Love And Thunder</h3></div>
+      <div class="movie-card"><img src="img/blackpanther_poster_lg.jpg" alt="Black Panther"><h3>Black Panther</h3></div>
+      <div class="movie-card"><img src="img/Anti-Venom.jpg" alt="ANTI-VENOM"><h3>Venom last dance</h3></div>
+      <div class="movie-card"><img src="img/Flash.jpg" alt="The Flash"><h3>The Flash</h3></div>
+      <div class="movie-card"><img src="img/Shazam!_(film)_poster.jpg" alt="Shazam!"><h3>Shazam!</h3></div>
+      <div class="movie-card"><img src="img/auqa.jpg" alt="Aquaman"><h3>Aquaman</h3></div>
+      <div class="movie-card"><img src="img/squidgame3.jpg" alt="Avatar"><h3>Squidgame 3</h3></div>
+      <div class="movie-card"><img src="img/squidgame2.jpg" alt="Avatar"><h3>Squidgame 2</h3></div>
+      <div class="movie-card"><img src="img/squidgame1.jpg" alt="Avatar"><h3>Squidgame 1</h3></div>
+      <div class="movie-card"><img src="img/Onepiece.jpg" alt="Onepiece"><h3>OnePiece</h3></div>
+      <div class="movie-card"><img src="img/animation.jpg" alt="Miles Morales"><h3>Spiderman: Miles Morales</h3></div>
+      <div class="movie-card"><img src="img/Spider.jpg" alt="Avatar"><h3>Spiderman No way Home</h3></div>
+      <div class="movie-card"><img src="img/GI.jpg" alt="Avatar"><h3>Guardians of the Galaxy 2</h3></div>
+      <div class="movie-card"><img src="img/gorilla.jpg" alt="Avatar"><h3>King Kong in the city</h3></div>
+      <div class="movie-card"><img src="img/Gozilla.jpg" alt="Avatar"><h3>Gozilla vs Monster in the city</h3></div>
+    </section>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const loginContainer = document.querySelector(".login-container");
+    const mainContainer = document.querySelector(".main-container");
+    const searchInput = document.getElementById("searchInput");
+    const movieGallery = document.getElementById("movieGallery");
+    const originalMovies = Array.from(movieGallery.children);
+
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      loginContainer.classList.add("hidden");
+      mainContainer.classList.remove("hidden");
+    });
+
+    searchInput.addEventListener("input", function() {
+      const searchValue = searchInput.value.toLowerCase();
+      movieGallery.innerHTML = "";
+      originalMovies.forEach(movie => {
+        const title = movie.querySelector("h3").textContent.toLowerCase();
+        if (title.includes(searchValue) || searchValue === "") {
+          movieGallery.appendChild(movie);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALLKINO.DE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0));
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #e50914;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    .search-box {
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .movie-card {
+      background-color: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .movie-card h3 {
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">AllKino.De</div>
+    <nav>
+      <a href="hauptseite.html">Startseite</a>
+      <a href="#">Support</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Film suchen..." />
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Alle Filme</h1>
+  </section>
+
+  <section class="movie-grid" id="movieGrid">
+    <a href="inter.html" class="movie-card"><img src="https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg" alt="Avengers: Endgame"><h3>Interstellar</h3></a>
+    <a href="harry.html" class="movie-card"><img src="img/harry.jpg" alt="Batman Begins"><h3>Harry Potter und der Stein der Weisen</h3></a>
+    <a href="Hulk.html" class="movie-card"><img src="img/Hulk_movie.jpg" alt="Hulk 1"><h3>Hulk</h3></a>
+    <a href="Spider.html" class="movie-card"><img src="img/Spider1.jpg" alt="Joker"><h3>Spider-Man: Far From Home</h3></a>
+    <a href="endgame.html" class="movie-card"><img src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SL1500_.jpg" alt="Interstellar"><h3>Avengers: Endgame</h3></a>
+    <a href="Avatar.html" class="movie-card"><img src="img/avatar2.jpg" alt="Avatar"><h3>Avatar: The Way of Water</h3></a>
+    <a href="Optimus.html" class="movie-card"><img src="img/Transformers.jpg" alt="Optimus Prime"><h3>Transformers 7: Aufstieg der Bestien</h3></a>
+    <a href="guardians.html" class="movie-card"><img src="img/guardens.jpg" alt="Guardians of the Galaxy"><h3>Guardians of the Galaxy: Volume 3</h3></a>
+    <a href="doctor.html" class="movie-card"><img src="img/Doctor.jpg" alt="Doctor Strange"><h3>Doctor Strange</h3></a>
+    <a href="365.html" class="movie-card"><img src="img/365.jpg" alt="365"><h3>365 Days - Noch ein Tag</h3></a>
+    <a href="Shrek.html" class="movie-card"><img src="img/Shrek.jpg" alt="Shrek"><h3>Shrek - Der tollkühne Held</h3></a>
+    <a href="Mufasa.html" class="movie-card"><img src="img/Mufasa.jpg" alt="Mufasa"><h3>Mufasa: Der König der Löwen</h3></a>
+    <a href="Minecraft.html" class="movie-card"><img src="img/Minecraft.jpg" alt="Minecraft"><h3>Minecraft Movie</h3></a>
+    <a href="ironman3.html" class="movie-card"><img src="img/ironman3.jpg" alt="Iron Man"><h3>Iron Man 3</h3></a>
+    <a href="Thor.html" class="movie-card"><img src="img/Thor1.jpg" alt="Thor"><h3>Thor: Love and Thunder</h3></a>
+    <a href="Black.html" class="movie-card"><img src="img/Black.jpg" alt="Black Panther"><h3>Black Panther</h3></a>
+    <a href="Venom.html" class="movie-card"><img src="img/Venom.jpg" alt="Venom"><h3>Venom: The Last Dance</h3></a>
+    <a href="Flash.html" class="movie-card"><img src="img/Flash.jpg" alt="The Flash"><h3>The Flash - Staffel 1</h3></a>
+    <a href="Shatzam.html" class="movie-card"><img src="img/Shazam!_(film)_poster.jpg" alt="Shazam!"><h3>Shazam!</h3></a>
+    <a href="Aquaman.html" class="movie-card"><img src="img/auqa.jpg" alt="Aquaman"><h3>Aquaman</h3></a>
+    <a href="Squidgame3.html" class="movie-card"><img src="img/squidgame3.jpg" alt="Squidgame"><h3>Squidgame Staffel 3</h3></a>
+    <a href="Squidgame2.html" class="movie-card"><img src="img/squidgame2.jpg" alt="Squidgame"><h3>Squidgame Staffel 2</h3></a>
+    <a href="Squidgame1.html" class="movie-card"><img src="img/squidgame1.jpg" alt="Squidgame"><h3>Squidgame Staffel 1 !PAGE NOT FOUND! COMING SOON</h3></a>
+    <a href="One.html" class="movie-card"><img src="img/one.jpg" alt="one"><h3>One Piece: Das Dead End Rennen</h3></a>
+    <a href="Spider3.html" class="movie-card"><img src="img/Spider3.jpg" alt="Miles Morales"><h3>Spider-Man: No Way Home</h3></a>
+    <a href="Spider2.html" class="movie-card"><img src="img/Spider21.jpg" alt="Spiderman"><h3>Spiderman 2</h3></a>
+    <a href="Guardian.html" class="movie-card"><img src="img/GI.jpg" alt="Guardians"><h3>Guardians of the Galaxy Vol. 2</h3></a>
+    <a href="king.html" class="movie-card"><img src="img/king.jpg" alt="King Kong"><h3>King Kong</h3></a>
+    <a href="#" class="movie-card"><img src="img/Gozilla.jpg" alt="Godzilla"><h3>Godzilla vs Monster in the City | PAGE NOT FOUND COMING SOON</h3></a>
+  </section>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const movieGrid = document.getElementById("movieGrid");
+    const movieCards = Array.from(movieGrid.children);
+
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      movieGrid.innerHTML = "";
+      movieCards.forEach(card => {
+        const title = card.querySelector("h3").textContent.toLowerCase();
+        if (title.includes(query)) {
+          movieGrid.appendChild(card);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
